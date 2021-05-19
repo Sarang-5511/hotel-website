@@ -1,0 +1,73 @@
+#section2{
+  background-color: rgb(218, 209, 209);
+}
+#footersection{
+    text-align: center;
+    padding:  5% 0;
+    background-color: rgb(255, 255, 255);
+}
+h2{
+  font-family: 'Bree Serif', serif;
+    text-align: center;
+    padding: 3% 0;
+    font-size: 2.5em;
+}
+h4{
+  font-family: 'Bree Serif', serif;
+  font-size: 1.75em;
+
+}
+.navbar-brand{
+  font-size: 2em;
+}
+.cont1{
+    padding: 0 25%;   
+}
+.row1{
+    padding: 5% 0;
+}
+.btn{
+  width: 150px;
+    padding: 12px 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+}
+.btn:hover{
+background-color: rgb(143, 143, 143);
+color: black;
+border: 2px solid black;
+}
+.social{
+  color: black;
+  font-size: 1.05em;
+ 
+}
+.copyright{
+    padding: 15px 0 0 0;
+}
+
+@media screen and (max-width:900px) {
+  h2{
+    text-align: center;
+    padding: 7% 0;
+}
+#section2{
+  background-color: blanchedalmond;
+  text-align: left;
+}
+.navbar-brand{
+  font-size: 1.5em;
+}
+  .btn{
+    width: 150px;
+    padding: 12px 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+}
+.btn:hover{
+background-color: rgb(158, 165, 158);
+color: black;
+}
+}

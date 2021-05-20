@@ -48,6 +48,11 @@ border: 2px solid rgb(212, 205, 205);
     padding: 10px;
     font-weight: 500;
 }
+.buttonsub:hover{
+    background-color: rgb(38, 125, 197);
+    border: 1px solid rgb(31, 30, 30);
+    
+}
 .social{
     color: black;
     font-size: 1.05em;

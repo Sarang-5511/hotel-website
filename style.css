@@ -224,10 +224,7 @@ p{
     text-decoration: none;
     
 }
-.navbar-brand{
-    font-size: 2em;
-    
-}
+
 .flip-card {
    
     background-color: transparent;
@@ -277,6 +274,7 @@ box-shadow: 4px 6px 4px rgb(66, 65, 65);
       width: 300px;
       height: 20em;
   }
+ 
 @media  screen and (max-width:900px) {
     h2{
         margin: 18% 0;
@@ -387,6 +385,7 @@ box-shadow: 4px 6px 4px rgb(66, 65, 65);
 .navbar-brand{
     font-size: 1.5em;
 }
+
   .flip-card {
       padding: 0 auto;
       margin: 4% auto;

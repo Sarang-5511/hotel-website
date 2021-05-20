@@ -11,8 +11,8 @@ color: whitesmoke;
     font-size: 1.25em;
 }
 .btn{
-    width: 8em;
-    border: 2px solid rgb(31, 30, 30);
+    width: 6em;
+    border: 2px solid rgb(228, 224, 224);
 }
 .btn:hover{
     background-color: rgb(38, 125, 197);

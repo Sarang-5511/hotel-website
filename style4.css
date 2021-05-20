@@ -1,11 +1,9 @@
-
 #section2{
     text-align: center;
     background-image: url(images/IMG_20210414_193808\ \(1\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
-   
 }
 #footersection{
     text-align: center;
@@ -65,6 +63,7 @@ h3{
         opacity: 0.9;
         height: 530px;
         margin: 20% auto;
+        
     }
     
     h3{

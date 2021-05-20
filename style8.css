@@ -1,6 +1,6 @@
 
 #section2{
-    padding: 7% 13%;
+    padding: 7% auto;
     background-color: rgb(218, 209, 209);
 }
 #footersection{
@@ -50,14 +50,25 @@ p{
     .map{
         margin: 7% auto;
         box-shadow: 5px 5px 5px rgb(70, 71, 71);
+<<<<<<< HEAD
         width: 300px;
+=======
+        width: 250px;
+>>>>>>> 72e37a675db50f7d4cba57bcc20802d3caabdef1
         height: 400px;
     }
     .navbar-brand{
         font-size: 1.5em;
     }
     p{
+<<<<<<< HEAD
         font-size: 1em;
     
     }
 }
+=======
+    font-size: 1.05em;
+
+}
+}
+>>>>>>> 72e37a675db50f7d4cba57bcc20802d3caabdef1

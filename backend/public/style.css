@@ -31,6 +31,7 @@
     text-align: center;
     padding:7% 5%;
     background-color: rgb(255, 255, 255);
+    margin: 0 auto;
 }
 #footersection{
     text-align: center;
@@ -55,6 +56,7 @@ h3{
 }
 h5{
     font-weight: bold;
+
 }
 p{
     font-size: 1.05em;
@@ -66,16 +68,26 @@ p{
     padding: 0%;
 }
 .card{
-   
+    border: none;
     text-align: center;
-    height: 20em;
+    height: 320px;
+   
+    
 }
 .card:hover{
     cursor: pointer;
-    box-shadow:8px 8px 8px #111111;
-    transform: scaleY(1.05);
+  
+    
 }
-
+.card-title{
+    font-size: 1.5em;
+    color: black;
+    letter-spacing: 3px;
+}
+.card-text{
+    padding: 10% 0;
+    color: black;
+}
 .social{
     color: black;
     font-size: 1.05em;
@@ -228,55 +240,7 @@ p{
     font-size: 2em;
     
 }
-.flip-card {
-   
-    background-color: transparent;
-    width: 300px;
-    height: 20em;
-box-shadow: 4px 6px 4px rgb(66, 65, 65);
-    perspective: 1000px; 
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    cursor: pointer;
-  }
-  
- 
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
-  }
- 
-  .flip-card-front {
-    color: black;
-  }
-  
- 
-  .flip-card-back {
-      padding-top: 70px;
-      text-align: center;
-      background-color: rgb(221, 218, 218);
-    color: rgb(14, 13, 13);
-    transform: rotateY(180deg);
-  }
-  .imagecard{
-      width: 300px;
-      height: 20em;
-  }
+
 @media  screen and (max-width:900px) {
     h2{
         margin: 18% 0;
@@ -387,18 +351,26 @@ box-shadow: 4px 6px 4px rgb(66, 65, 65);
 .navbar-brand{
     font-size: 1.5em;
 }
-  .flip-card {
-      padding: 0 auto;
-      margin: 4% auto;
-    background-color: transparent;
-    width: 280px;
-    height: 20em;
- 
-    perspective: 1000px; 
-  }
-  .imagecard{
-    width: 280px;
-    height: 20em;
+
+.card{
+   
+    text-align: center;
+    height: 320px;
+    width: 320px;
+    margin: 5% auto;
+    
+}
+.card:hover{
+    cursor: pointer;
+    
+}
+.card-title{
+    font-size: 1.5em;
+    color: black;
+}
+.card-text{
+    padding: 10% 0;
+    color: black;
 }
 
 }

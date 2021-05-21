@@ -44,8 +44,8 @@ h5{
     border-radius: 15px;
 }
 .btn:hover{
-background-color: rgb(143, 143, 143);
-color: black;
+background-color: rgb(19, 18, 18);
+color: rgb(255, 255, 255);
 }
 .social{
   color: black;

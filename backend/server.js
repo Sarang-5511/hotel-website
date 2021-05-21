@@ -39,7 +39,12 @@ app.use('C:/Y_Drive/WebDev/hotel-website/hotel-website', express.static(__dirnam
 
 // Navigation
 app.get('/ejs', (req, res) => {
-    res.render('index', { text: 'Hey' })
+
+    Feedback.find({}, function(err,feedbacks){
+        res.render('viewfeedbackdetails', { 
+        feedbackList: feedbacks 
+        })
+    })
 })
 
 app.get('/', (req, res) => {

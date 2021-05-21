@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 #section1{
     background-image: url(images/indexback2.jpg);
     height: 900px;
@@ -39,12 +43,12 @@
   background-color: rgb(255, 255, 255);
 }
 h2{
-    margin: 18% 0 5% 0;
+    margin: 15% 0 5% 0;
     padding: 10% auto;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Tangerine', cursive;
     font-weight: bold;
     color: rgb(252, 248, 248);
-    font-size: 5.5em;
+    font-size: 7em;
     text-align: center;
    
 }
@@ -243,8 +247,8 @@ p{
 
 @media  screen and (max-width:900px) {
     h2{
-        margin: 18% 0;
-        font-family: 'Lobster', cursive;
+        margin: 25% 0;
+        font-family: 'Tangerine', cursive;
         font-weight: bold;
         color: white;
         font-size: 5em;
@@ -347,9 +351,6 @@ p{
     text-align: center;
     font-size: 1.5em;
     padding-top: 9px;
-}
-.navbar-brand{
-    font-size: 1.5em;
 }
 
 .card{

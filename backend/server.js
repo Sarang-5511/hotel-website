@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
+const dine_app = express();
 const port = 3000;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
+dine_app.use(bodyParser.urlencoded({extended: true}));
 
 // Set View's
 app.set('views', './views');
@@ -24,7 +26,19 @@ const feedbackSchema= {
 
 }
 
+const dineSchema= {
+    f_name: String,
+    l_name: String,
+    contact: Number,
+    noperson: Number,
+    datereserve: Date,
+    timereserve: String
+
+}
+
 const Feedback =mongoose.model("Feedback",feedbackSchema);
+
+const Dine =mongoose.model("dine",dineSchema);
 
 
 
@@ -38,11 +52,20 @@ app.use('C:/Y_Drive/WebDev/hotel-website/hotel-website', express.static(__dirnam
 
 
 // Navigation
-app.get('/ejs', (req, res) => {
+app.get('/feedback_details', (req, res) => {
 
     Feedback.find({}, function(err,feedbacks){
         res.render('viewfeedbackdetails', { 
         feedbackList: feedbacks 
+        })
+    })
+})
+
+app.get('/dine_reservation_details', (req, res) => {
+
+    Dine.find({}, function(err,dines){
+        res.render('viewdinereservations', { 
+        dineList: dines 
         })
     })
 })
@@ -85,4 +108,20 @@ app.post("/",function(req,res){
     res.redirect('/');
 })
 
-app.listen(port, () => console.info(`App listening on port ${port} `+__dirname))
+app.post("/top",function(req,res){
+    let newDine = new Dine({
+        f_name: req.body.firstname,
+        l_name: req.body.lastname,
+        contact: req.body.contact,
+        noperson: req.body.nopersons,
+        datereserve: req.body.datereserve,
+        timereserve: req.body.timereserve
+        
+    });
+    newDine.save();
+    res.redirect('/');
+})
+
+
+
+app.listen(port, () => console.info(`App listening on port ${port} `))

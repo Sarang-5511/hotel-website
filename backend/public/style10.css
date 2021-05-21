@@ -5,7 +5,8 @@ background-color: black;
 color: whitesmoke;
 }
 .row1{
-    margin-bottom: 15% ;
+    margin-bottom: 5% ;
+    text-align: center;
 }
 .para{
     font-size: 1.25em;

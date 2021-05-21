@@ -119,6 +119,14 @@ app.get('/feedback', (req, res) => {
     res.sendFile(__dirname+'/public/feedback.html')
 })
 
+app.get('/admin_home', (req, res) => {
+    res.sendFile(__dirname+'/public/viewreservations.html')
+})
+
+app.get('/admin_login', (req, res) => {
+    res.sendFile(__dirname+'/public/loginadmin.html')
+})
+
 app.post("/",function(req,res){
     let newFeedback = new Feedback({
         f_name: req.body.firstname,

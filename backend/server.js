@@ -36,9 +36,21 @@ const dineSchema= {
 
 }
 
+const roomSchema= {
+    name: String,
+    email: String,
+    checkin: Date,
+    checkout: Date,
+    adultperson: Number,
+    children: String
+
+}
+
 const Feedback =mongoose.model("Feedback",feedbackSchema);
 
 const Dine =mongoose.model("dine",dineSchema);
+
+const Room =mongoose.model("room",roomSchema);
 
 
 
@@ -70,6 +82,15 @@ app.get('/dine_reservation_details', (req, res) => {
     })
 })
 
+app.get('/room_reservation_details', (req, res) => {
+
+    Room.find({}, function(err,rooms){
+        res.render('viewroomreservations', { 
+        roomList: rooms
+        })
+    })
+})
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname+'/public/index.html')
 })
@@ -84,6 +105,10 @@ app.get('/menu', (req, res) => {
 
 app.get('/dine_reservation', (req, res) => {
     res.sendFile(__dirname+'/public/dinereservation.html')
+})
+
+app.get('/rooms', (req, res) => {
+    res.sendFile(__dirname+'/public/rooms.html')
 })
 
 app.get('/room_reservation', (req, res) => {
@@ -110,15 +135,30 @@ app.post("/",function(req,res){
 
 app.post("/top",function(req,res){
     let newDine = new Dine({
-        f_name: req.body.firstname,
+        f_name: req .body.firstname,
         l_name: req.body.lastname,
         contact: req.body.contact,
         noperson: req.body.nopersons,
         datereserve: req.body.datereserve,
         timereserve: req.body.timereserve
-        
+
     });
     newDine.save();
+    res.redirect('/');
+})
+
+app.post("/r_submit",function(req,res){
+    let newRoom = new Room({
+
+        name: req.body.name,
+        email: req.body.email,
+        checkin: req.body.checkin,
+        checkout: req.body.checkout,
+        adultperson: req.body.adultperson,
+        children: req.body.children
+
+    });
+    newRoom.save();
     res.redirect('/');
 })
 

@@ -170,6 +170,20 @@ app.post("/r_submit",function(req,res){
     res.redirect('/');
 })
 
+app.post('/login', function (req, res)
+   {
+      var user=req.body.username;
+      var password=req.body.password;
+      if((user=='admin')&&(password=='admin'))
+         { 
+            res.redirect('/admin_home');
+          }
+       else
+          {
+              
+          }
+    })
+
 
 
 app.listen(port, () => console.info(`App listening on port ${port} `))

@@ -13,11 +13,14 @@
   background-color: rgb(255, 255, 255);
 }
 h3{
-    
+    letter-spacing: 3px;
   padding-top: 15px;
     color:#ffffff;
     text-align: center;
     font-size: 2em;
+}
+.nav-link{
+    font-size: 1.05em;
 }
 .navbar-brand{
     font-size: 2em;

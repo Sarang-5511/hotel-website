@@ -17,9 +17,13 @@ h2{
   line-height: 0.75;
   font-family: 'Bree Serif', serif;
   color: rgb(224, 224, 224);
+  letter-spacing: 3px;
 }
 .navbar-brand{
     font-size: 2em;
+}
+.nav-link{
+    font-size: 1.05em;
 }
 .cont1{
     margin: 14% 0;
@@ -49,6 +53,7 @@ h2{
 .inputdate{
     font-weight: bold;
 }
+
 .social{
     color: black;
     font-size: 1.05em;

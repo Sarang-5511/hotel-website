@@ -176,6 +176,7 @@ p{
 #menupage{
     font-size: 1.25em;
     color: black;
+    letter-spacing: 3px;
 }
 #menupage:hover{
     color: rgb(75, 75, 224);

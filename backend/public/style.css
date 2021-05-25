@@ -60,6 +60,7 @@ h3{
 }
 h5{
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 
 }
 p{
@@ -74,14 +75,11 @@ p{
 .card{
     border: none;
     text-align: center;
-    height: 320px;
-   
-    
+    height: 320px; 
 }
+
 .card:hover{
     cursor: pointer;
-  
-    
 }
 .card-title{
     font-size: 1.5em;
@@ -89,9 +87,14 @@ p{
     letter-spacing: 3px;
 }
 .card-text{
-    padding: 10% 0;
-    color: black;
+    padding: 40% 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+  
 }
+
+
+
 .social{
     color: black;
     font-size: 1.05em;
@@ -156,15 +159,15 @@ p{
     height: 75px;
 }
 .roombut{
-
+    letter-spacing:3px;
+    font-size: 1.5em;
     color: white;
     font-weight: bold;
-   
-    
+    background-color: transparent;
 }
 .roombut:hover{
     color: black;
-    background-color: rgb(169, 169, 231);
+    background-color: rgb(185, 185, 241);
 }
 #menupage{
     font-size: 1.25em;

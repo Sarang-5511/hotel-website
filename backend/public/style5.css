@@ -27,9 +27,10 @@ h2{
 }
 .cont2{
    margin-top: 7%;
-    background-color: rgb(189, 228, 228);
+    background-color: #C5A458;
     padding: 2% 1.5%;
     height: 400px;
+    opacity: 0.8;
   
 }
 .labels{

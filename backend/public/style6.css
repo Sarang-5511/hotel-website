@@ -17,7 +17,11 @@ h2{
     color: rgb(0, 0, 0);
     font-size: 3em;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 3px;
 
+}
+.nav-link{
+    font-size: 1.05em;
 }
 .para1{
     color: blanchedalmond;

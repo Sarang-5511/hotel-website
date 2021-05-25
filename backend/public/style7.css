@@ -16,6 +16,7 @@ h2{
     padding: 2.5% 0;
     font-size: 3em;
     color: whitesmoke;
+    letter-spacing:5px;
 }
 
 h5{
@@ -25,7 +26,9 @@ h5{
 .navbar-brand{
   font-size: 2em;
 }
-
+.nav-link{
+  font-size: 1.05em;
+}
 .card{
   text-align: center;
   margin: 10% 0;

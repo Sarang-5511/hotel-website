@@ -103,3 +103,7 @@ border: 2px solid rgb(212, 205, 205);
         font-weight: 500;
     }
 }
+
+.msg{
+    color: rgb(255, 0, 0);
+}

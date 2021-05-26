@@ -5,9 +5,25 @@ const port = 3000;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
+var session = require('express-session');
+var flush = require("connect-flash");
+
+
+
+
+const cookieParser = require('cookie-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
 dine_app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(cookieParser('secret'))
+app.use(session({
+    secret: 'secret',
+    cookie: {maxAge:null },
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(flush());
 
 // Set View's
 app.set('views', './views');
@@ -64,6 +80,12 @@ app.use('C:/Y_Drive/WebDev/hotel-website/hotel-website', express.static(__dirnam
 
 
 // Navigation
+
+app.get('/admin_login', function(req, res){
+
+        res.render('loginadmin', { message: req.flash("message") })
+});
+
 app.get('/feedback_details', (req, res) => {
 
     Feedback.find({}, function(err,feedbacks){
@@ -123,9 +145,9 @@ app.get('/admin_home', (req, res) => {
     res.sendFile(__dirname+'/public/viewreservations.html')
 })
 
-app.get('/admin_login', (req, res) => {
-    res.sendFile(__dirname+'/public/loginadmin.html')
-})
+// app.get('/admin_login', (req, res) => {
+//     res.sendFile(__dirname+'/public/loginadmin.html')
+// })
 
 app.post("/",function(req,res){
     let newFeedback = new Feedback({
@@ -180,8 +202,9 @@ app.post('/login', function (req, res)
           }
        else
           {
-              
-          }
+           req.flash('message','Enter Correct Credentials');
+           res.redirect('/admin_login');
+          } 
     })
 
 
